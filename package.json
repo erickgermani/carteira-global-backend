@@ -1,25 +1,30 @@
 {
-  "name": "carteira-global-backend",
-  "version": "1.0.0",
-  "description": "O backend de uma aplicação web de carteira digital que tem o foco de centralizar o saldo de todas as fontes e créditos financeiros.",
-  "main": "app.js",
-  "scripts": {
-    "test": "npm run test",
-    "prettier": "prettier --write \"./src/**/*.(js|scss)\"",
-    "prepare": "husky install"
-  },
-  "author": "Erick Germani",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2"
-  },
-  "devDependencies": {
-    "eslint": "^8.40.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
-    "prettier": "2.8.8"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
-  }
+	"name": "carteira-global-backend",
+	"version": "1.0.0",
+	"description": "O backend de uma aplicação web de carteira digital que tem o foco de centralizar o saldo de todas as fontes e créditos financeiros.",
+	"main": "app.js",
+	"scripts": {
+		"test": "npm run test",
+		"dev": "nodemon src/index.js",
+		"prettier": "prettier --write \"src/**/*.(js|scss)\"",
+		"lint": "eslint src/**/*.js --fix",
+		"prepare": "husky install"
+	},
+	"author": "Erick Germani",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.18.2"
+	},
+	"devDependencies": {
+		"eslint": "^8.40.0",
+		"eslint-plugin-node": "^11.1.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.2.2",
+		"nodemon": "^2.0.22",
+		"prettier": "2.8.8"
+	},
+	"lint-staged": {
+		"src/**/*.(js|scss)": "prettier --write --ignore-unknown",
+		"src/**/*.js": "eslint --fix"
+	}
 }
