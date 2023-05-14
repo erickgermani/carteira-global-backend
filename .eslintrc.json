@@ -33,6 +33,7 @@
 			"error",
 			"always"
 		],
+		"no-unused-vars": "warn",
 		"node/no-unsupported-features/es-syntax": "off",
 		"node/no-unpublished-require": [
 			"error",
