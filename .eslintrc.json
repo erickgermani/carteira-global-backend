@@ -1,7 +1,8 @@
 {
 	"env": {
 		"browser": true,
-		"es2021": true
+		"es2021": true,
+		"jest": true
 	},
 	"extends": [
 		"eslint:recommended",
@@ -32,6 +33,14 @@
 			"error",
 			"always"
 		],
-		"node/no-unsupported-features/es-syntax": "off"
+		"node/no-unsupported-features/es-syntax": "off",
+		"node/no-unpublished-require": [
+			"error",
+			{
+				"allowModules": [
+					"supertest"
+				]
+			}
+		]
 	}
 }
