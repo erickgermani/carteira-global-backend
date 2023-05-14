@@ -2,15 +2,16 @@
 	"name": "carteira-global-backend",
 	"version": "1.0.0",
 	"description": "O backend de uma aplicação web de carteira digital que tem o foco de centralizar o saldo de todas as fontes e créditos financeiros.",
-	"main": "src/index.js",
+	"main": "src/server.js",
+	"repository": "git@github.com:erickgermani/carteira-global-backend.git",
 	"scripts": {
 		"test": "NODE_ENV=test jest --forceExit --detectOpenHandles",
-		"dev": "nodemon src/index.js",
+		"dev": "nodemon src/server.js",
 		"prettier": "prettier src/** test/** --write",
 		"lint": "eslint src/** test/** --fix",
 		"prepare": "husky install"
 	},
-	"author": "Erick Germani",
+	"author": "Erick Germani <erickgermani13@gmail.com>",
 	"license": "ISC",
 	"dependencies": {
 		"express": "^4.18.2"
